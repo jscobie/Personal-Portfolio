@@ -12,6 +12,14 @@ body {
     background-color: #13293d;
     color: #fff;
   }
+
+  main {
+    height: 300px;
+    width: 100%;
+    background-image: url("../assets/R.jpg");
+    background-size: cover;
+    background-position: top;
+  }
   
   h1 {
     font-size: 200%;
@@ -34,6 +42,7 @@ body {
     color: #b9C6ae;
     font-weight: bold;
     text-decoration: none;
+    margin: 10px;
   }
   
   nav a:hover {
@@ -51,11 +60,11 @@ body {
 
   footer ul {
     display: flex;
-    justify-content: space-between;
     min-width: 300px;
   }
 
   footer a {
+    margin: 10px;
     color: #b9C6ae;
     font-weight: bold
   }
