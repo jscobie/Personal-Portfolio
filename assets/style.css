@@ -17,7 +17,7 @@ header {
   color: whitesmoke;
   height: 200px;
   width: 100%;
-  background-image: url("../assets/R.jpg");
+  background-image: url("../assets/images/R.jpg");
   background-size: cover;
   background-position: top;
 }
@@ -30,6 +30,7 @@ h2 {
   display: flex;
   justify-content: flex-end;
   font-size: 150%;
+  margin-right: 2.5%;
   position: relative;
   top: 160px;
 }
@@ -76,12 +77,56 @@ footer a {
 
 footer a:hover {
     color: #fff;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 #about-me {
-  /* background-color: #13293d; */
   background-image: linear-gradient(to top, #477eb3, #13293d);
   padding-top: 20px;
   color: #fff;
+}
+
+#my-work {
+  background-image: linear-gradient(to top, #13293d, #477eb3);
+  padding-top: 20px;
+  color: #fff;
+}
+
+.wide-card {
+  display: flex;
+  font-weight: bold;
+  color: whitesmoke;
+  height: 200px;
+  width: 100%;
+  background-image: url("../assets/images/f1-wide.jpg");
+  background-size: cover;
+  background-position: top;
+  opacity: 0.65;
+}
+
+.wide-card:hover {
+  opacity: 1;
+}
+
+.wide-card p {
+  display: flex;
+  position: relative;
+  top: 140px;
+  padding: 20px;
+  max-height: 20px; 
+  background-color: darkgray;
+}
+
+.narrow-card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1040px;
+  margin: 0 auto;
+
+}
+
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 5%;
 }
