@@ -1,3 +1,6 @@
+/* This file is used to strip the browser standards and reset them to a single
+    type so my style.css file does not run into other issues */
+    
 * {
     margin: 0;
     padding: 0;

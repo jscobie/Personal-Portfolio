@@ -1,29 +1,36 @@
+:root {
+  /* declare color variables to help with color cohesiveness and fast changes */
+  --textwhite: whitesmoke;
+  --navlink: #b9C6ae;
+  --darkbg: #13293d;
+  --lightbg: #72afe7;
+}
+
 body {
+  /* sets the body as a flex container */
   display: flex;
   flex-direction: column;
   line-height: 1.3;
 }
 
 header {
+  /* sets the header to a flex container and its spacing of header elements */
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 2%;
-  background-color: #13293d;
-  color: #fff;
+  background-color: var(--darkbg);
+  color: var(--textwhite);
 }
 
 .banner {
-  color: whitesmoke;
+  /* this is the section between header and main body where the banner image shows */
+  color: var(--textwhite);
   height: 200px;
   width: 100%;
   background-image: url("../assets/images/R.jpg");
   background-size: cover;
   background-position: center;
-}
-
-.banner:hover {
-  background-position: bottom;
 }
 
 h1 {
@@ -45,21 +52,25 @@ h3, h4, h5 {
 }
 
 nav ul {
+  /* this is the upper navigation link container set up for flex and spacing */
   display: flex;
   justify-content: space-between;
   min-width: 300px;
 }
 
-nav a {
-  color: #b9C6ae;
+nav a, footer a {
+  /* this is the links themselves (nav in header and in footer), 
+  color and styling */
+  color: var(--navlink);
   font-weight: bold;
   text-decoration: none;
   margin: 10px;
-
 }
 
-nav a:hover {
-  color: #fff;
+nav a:hover, footer a:hover {
+  /* uique on hover method to change the navigation links in header nav and footer
+   to white and underline for interactive design */
+  color: var(--textwhite);
   text-decoration:underline;
 }
 
@@ -68,8 +79,8 @@ footer {
   justify-content: space-between;
   align-items: baseline;
   padding: 2%;
-  background-color: #13293d;
-  color: #fff;
+  background-color: var(--darkbg);
+  color: var(--textwhite);
 }
 
 footer ul {
@@ -77,31 +88,45 @@ footer ul {
   min-width: 300px;
 }
 
-footer a {
-  margin: 10px;
-  color: #b9C6ae;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
 #about-me {
-  background-image: linear-gradient(to top, #72afe7, #13293d);
+  /* this is the About Me section where I applied a nice gradient top to bottom
+  which flows into the My Work section opposite */
+  background-image: linear-gradient(to top, var(--lightbg), var(--darkbg));
   padding-top: 20px;
   color: #fff;
+}
+
+#about-text {
+  /* Style, size and positioning of the subject in the About Me section */
+  margin-left: 200px;
+  max-width: 850px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#notice-of-placeholder:hover {
+  /* Placeholder explaining portfolio personal work requirements, this is a 
+  special on hover to call attention to user */
+  font-style: italic;
+}
+
+#notice-of-placeholder::before, #notice-of-placeholder::after {
+/* Placeholder explaining portfolio personal work requirements, this is a 
+  special character to start/end this statement to call attention to user */
+  font-family: Impact;
+  color: darkblue;
+  content: '\273A';
 }
 
 #my-work {
-  background-image: linear-gradient(to top, #13293d, #72afe7);
+    /* this is the My Work section where I applied a nice gradient top to bottom
+  which flows from the About Me section opposite */
+  background-image: linear-gradient(to top, var(--darkbg), var(--lightbg));
   padding-top: 20px;
-  color: #fff;
+  color: var(--textwhite);
 }
 
 .wide-card {
+  /* This is styling and flex declaration for the top link/image/application */
   display: flex;
   font-weight: bold;
   color: silver;
@@ -115,14 +140,17 @@ footer a:hover {
 }
 
 .wide-card a {
+  /* removing link formating of an a tag for final appearance */
   text-decoration: none;
 }
 
 .wide-card:hover {
-  opacity: 1;
+  /* On hover of the image of the wide card this changes opacity to 100% */
+  opacity: 100%;
 }
 
 .wide-card p {
+  /* Text box for the wide link/image/application */
   display: flex;
   width: fit-content;
   position: relative;
@@ -134,11 +162,12 @@ footer a:hover {
   background-color: darkslategray;
   border-style: groove;
   border-width: 1px;
-  color: white;
+  color: var(--textwhite);
   font-weight: bolder;
 }
 
 .narrow-card {
+  /* This is styling and flex declaration for the 4 smaller links/images/applications */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -149,6 +178,7 @@ footer a:hover {
 }
 
 .image-wrapper p {
+  /* Text boxes for the 4 smaller links/images/applications */
   display: flex;
   width: fit-content;
   position: relative;
@@ -162,11 +192,12 @@ footer a:hover {
   background-color: darkslategray;
   border-style: groove;
   border-width: 1px;
-  color: white;
+  color: var(--textwhite);
   font-weight: bolder;
 }
 
 .image-wrapper {
+  /* Hanldes positioning of the 4 smaller images and text boxes */
   position: relative;
   max-width: 100%;
   width: 300px;
@@ -174,41 +205,47 @@ footer a:hover {
 }
 
 .image-wrapper img {
+  /* formating the flex box items - including the opacity to 65% to start */
   width: 300px;
   height: auto;
   padding: 5px;
   opacity: 65%;
 }
 
-#about-text {
-  margin-left: 200px;
-  max-width: 850px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .image-wrapper img:hover {
+  /* formating the flex box images - changing the opacity to 100% on hover
+  to be interactive */
   opacity: 100%;
-}
-#notice-of-placeholder:hover {
-  font-style: italic;
+  
 }
 
-#notice-of-placeholder::before, #notice-of-placeholder::after {
-  font-family: Impact;
-  content: '\273A';
+.legal-words {
+  /* All sites need the legalese or copyright, this is that section's styling */
+  background-color: var(--darkbg);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  margin: 0 auto;
+  font-family: monospace;
+  color:var(--textwhite);
+}
+
+.legal-words:hover {
+  /* Upper case and add a drop text shadow to the legal copyright on hover */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px red;
 }
 
 @media screen and (max-width: 768px) {
-  header, main {
+  /* Below code handles when the screen/device is below 768px
+    this will change to a column flex to be responsive to smaller
+    screens using a media tag */
+    
+  header, main, footer {
     flex-direction: column;
   }
 
   section {
     padding-right: 0;
   }
-
-  aside {
-    width: 100%;
-    text-align: center;
-  }
-}
